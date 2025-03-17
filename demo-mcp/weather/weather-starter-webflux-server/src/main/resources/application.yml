@@ -1,0 +1,12 @@
+
+server:
+  port: 8001
+
+spring:
+  application:
+    name: weather-starter-webflux-server
+  ai:
+    mcp:
+      server:
+        name: my-weather-server
+        version: 0.0.1

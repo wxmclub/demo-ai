@@ -1,0 +1,12 @@
+
+server:
+  port: 8002
+
+spring:
+  application:
+    name: weather-starter-webmvc-server
+  ai:
+    mcp:
+      server:
+        name: my-weather-server
+        version: 0.0.1
