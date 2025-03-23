@@ -82,7 +82,7 @@ public class WeatherService {
      * @return The forecast for the given location
      * @throws RestClientException if the request fails
      */
-    @Tool(description = "Get weather forecast for a specific latitude/longitude")
+    @Tool(name = "getWeatherForecastByLocation", description = "Get weather forecast for a specific latitude/longitude")
     public String getWeatherForecastByLocation(double latitude,
                                                double longitude) {
         var points = restClient.get()
@@ -112,7 +112,7 @@ public class WeatherService {
      * @return Human readable alert information
      * @throws RestClientException if the request fails
      */
-    @Tool(description = "Get weather alerts for a US state. Input is Two-letter US state code (e.g. CA, NY)")
+    @Tool(name = "getAlerts", description = "Get weather alerts for a US state. Input is Two-letter US state code (e.g. CA, NY)")
     public String getAlerts(String state) {
         Alert alert = restClient.get().uri("/alerts/active/area/{state}", state).retrieve().body(Alert.class);
 
