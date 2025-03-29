@@ -1,0 +1,19 @@
+debug: true
+
+logging:
+  level:
+    sql: debug
+    com.demo.ai.langchain4j.app: debug
+
+spring:
+  application:
+    name: demo-langchain4j-app
+
+langchain4j:
+  open-ai:
+    streaming-chat-model:
+      base-url: http://localhost:1234/v1
+      api-key: 1
+      model-name: qwen2:5-7b-instruct
+      log-requests: true
+      log-responses: true
