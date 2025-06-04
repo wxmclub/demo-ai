@@ -1,0 +1,32 @@
+
+server:
+  port: 8301
+
+logging:
+  level:
+    com.demo.ai.mem.graphiti: debug
+    reactivefeign.client.log: trace
+    org.springframework.core.env: debug
+    org.springframework.web.reactive.function.client: trace
+    org.springframework.http.codec: trace
+    org.springframework.core.codec: trace
+
+spring:
+  application:
+    name: demo-graphiti
+  ai:
+    dashscope:
+      api-key: ${AI_DASHSCOPE_API_KEY}
+      chat:
+        options:
+          model: deepseek-v3
+
+http-exchange-client:
+  config:
+    default:
+      connect-timeout: 2s
+      read-timeout: 30s
+    graphiti-server:
+      url: http://localhost:8000
+      connect-timeout: 2s
+      read-timeout: 30s
